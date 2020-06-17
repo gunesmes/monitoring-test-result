@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="" tests="5" failures="1" errors="0" skipped="0" time="34.245" timestamp="2020-06-17T07:45:07" hostname="localhost">
+  <properties />
+  <testcase name="listGoesOverTheFold" classname="app.vngrs.githubchallenge.HelloWorldEspressoTest" time="2.696" />
+  <testcase name="checkLoginPageIsOpened" classname="app.vngrs.githubchallenge.tests.loginpage.LoginPageTests" time="2.226" />
+  <testcase name="searchUserAccount" classname="app.vngrs.githubchallenge.tests.searchaccountpage.SearchAccountTests" time="15.869" />
+  <testcase name="checkSearchPageIsOpened" classname="app.vngrs.githubchallenge.tests.searchpage.SearchPageTests" time="1.26" />
+  <testcase name="checkUserProfileIsOpened" classname="app.vngrs.githubchallenge.tests.userprofilepage.UserProfilePageTests" time="11.326">
+    <failure>java.lang.AssertionError: Element 'androidx.test.espresso.ViewInteraction&#64;617ab7a' NOT FOUND!
+at org.junit.Assert.fail(Assert.java:88)
+at app.vngrs.githubchallenge.utilities.MyViewActionsKt.waitElement(MyViewActions.kt:197)
+at app.vngrs.githubchallenge.pages.SearchAccountPage.goToUserProfilePage(SearchAccountPage.kt:37)
+at app.vngrs.githubchallenge.tests.userprofilepage.UserProfilePageTests.testSetupUserProfile(UserProfilePageTests.kt:17)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at androidx.test.internal.runner.junit4.statement.RunBefores.evaluate(RunBefores.java:76)
+at androidx.test.internal.runner.junit4.statement.RunAfters.evaluate(RunAfters.java:61)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:56)
+at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:392)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+</testsuite>
