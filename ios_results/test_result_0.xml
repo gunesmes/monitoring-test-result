@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites>
-  <testsuite name='MoviesTests' hostname='localhost' tests='2' failures='0' errors='0' time='0.271'>
+  <testsuite name='MoviesTests' hostname='localhost' tests='2' failures='0' errors='0' time='0.268'>
     <properties />
-    <testcase name='testExample()' classname='MoviesTests' time='0.003' />
-    <testcase name='testPerformanceExample()' classname='MoviesTests' time='0.266' />
+    <testcase name='testExample()' classname='MoviesTests' time='0.004' />
+    <testcase name='testPerformanceExample()' classname='MoviesTests' time='0.264' />
     <system-out />
     <system-err />
   </testsuite>
-  <testsuite name='MoviesUITests' hostname='localhost' tests='4' failures='0' errors='0' time='37.256'>
+  <testsuite name='MoviesUITests' hostname='localhost' tests='4' failures='1' errors='0' time='35.377'>
     <properties />
-    <testcase name='testButtons()' classname='HomePageTests' time='16.984' />
-    <testcase name='testButtonsWorking()' classname='HomePageTests' time='20.271' />
-    <testcase name='testExample()' classname='MoviesUITests' time='10.483' />
-    <testcase name='testLaunchPerformance()' classname='MoviesUITests' time='62.459' />
+    <testcase name='testButtons()' classname='HomePageTests' time='16.542' />
+    <testcase name='testButtonsWorking()' classname='HomePageTests' time='18.834' />
+    <testcase name='testExample()' classname='MoviesUITests' time='9.074' />
+    <testcase name='testLaunchPerformance()' classname='MoviesUITests' time='59.681' />
     <system-out />
     <system-err />
   </testsuite>
