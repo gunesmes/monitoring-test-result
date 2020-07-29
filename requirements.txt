@@ -1,0 +1,9 @@
+numpy==1.15.4
+lxml==4.5.0
+cryptography==2.7
+Cython==0.29.21
+ipaddr==2.2.0
+protobuf==3.12.2
+pyOpenSSL==19.1.0
+redis==3.5.3
+wincertstore==0.2
