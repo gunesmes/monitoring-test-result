@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites>
-  <testsuite name='MoviesTests' hostname='localhost' tests='2' failures='0' errors='0' time='0.268'>
+  <testsuite name='MoviesTests' hostname='localhost' tests='3' failures='0' errors='0' time='0.268'>
     <properties />
     <testcase name='testExample()' classname='MoviesTests' time='0.004' />
     <testcase name='testPerformanceExample()' classname='MoviesTests' time='0.264' />
     <system-out />
     <system-err />
   </testsuite>
-  <testsuite name='MoviesUITests' hostname='localhost' tests='4' failures='1' errors='0' time='35.377'>
+  <testsuite name='MoviesUITests' hostname='localhost' tests='4' failures='0' errors='0' time='35.377'>
     <properties />
     <testcase name='testButtons()' classname='HomePageTests' time='16.542' />
     <testcase name='testButtonsWorking()' classname='HomePageTests' time='18.834' />

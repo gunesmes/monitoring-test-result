@@ -4,9 +4,10 @@ require 'rexml/document'
 require "nokogiri"
 require "uri"
 require "net/http"
+require 'backtrace'
 
 
-ELASTIC_URL = "http://18.158.212.172:9200/app/suite"
+ELASTIC_URL = "http://localhost:9200/app/suite"
 PROJECT = ARGV[0]
 TEST_RESULT_DIR = "./#{PROJECT}_results"
 TEST_TYPE = ARGV[1]
@@ -53,9 +54,13 @@ def send_data(line)
 	request["Content-Type"] = "application/json"
 	request.body = data.to_s.gsub("=>", ":")
 
-	response = http.request(request)
+	begin
+		response = http.request(request)		
+		print("  - new data exported: #{response.code}    data: #{data}\n")
+	rescue Net::OpenTimeout => e
+		print("Net::OpenTimeout error check the Elasticsearch at #{ELASTIC_URL}\n")
+	end
 
-	print("  - new data exported: #{response.code}    data: #{data}\n")
 end
 
 if __FILE__ == $0
