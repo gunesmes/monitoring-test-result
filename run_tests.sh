@@ -10,22 +10,22 @@ SECONDS=0
 echo -e "\n * * * * * *  RUN $PLATFORM TESTS  * * * * * * \n"
 
 if [[ $PLATFORM == 'ios' ]]; then
-	gcloud firebase test ios run \
-		--test /Users/mesut/Desktop/vngrs-toolset-ios/Build/Products/Movies.zip \
-		--device model=iphone11,version=13.3,locale=tr_TR,orientation=portrait \
-		--xcode-version=11.3.1 \
-		--results-dir=$UUID
+  gcloud firebase test ios run \
+    --test /Users/mesut/Desktop/vngrs-toolset-ios/Build/Products/Movies.zip \
+    --device model=iphone11,version=13.3,locale=tr_TR,orientation=portrait \
+    --xcode-version=11.3.1 \
+    --results-dir=$UUID
 else
-	gcloud firebase test android run \
-     --type instrumentation \
-     --app /Users/mesut/Projects/vngrs-toolkits/android-mvvm-coroutines/app/build/outputs/apk/debug/app-debug.apk \
-     --test /Users/mesut/Projects/vngrs-toolkits/android-mvvm-coroutines/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk \
-     --device model=Nexus5,version=23 \
-     --environment-variables coverage=true,coverageFile="/sdcard/coverage.ec" \
-     --directories-to-pull /sdcard \
-     --timeout 100 \
-     --test-targets "package app.vngrs.githubchallenge" \
-     --results-dir=$UUID
+  gcloud firebase test android run \
+    --type instrumentation \
+    --app $HOME/Projects/vngrs-toolkits/autopaper-android-app/app/build/outputs/apk/qa/debug/app-qa-debug.apk \
+    --test  $HOME/Projects/vngrs-toolkits/autopaper-android-app/app/build/outputs/apk/androidTest/qa/debug/app-qa-debug-androidTest.apk \
+    --device model=Nexus5,version=23 \
+    --environment-variables coverage=true,coverageFile="/sdcard/coverage.ec" \
+    --directories-to-pull /sdcard \
+    --timeout 100 \
+    --test-targets "package com.vngrs.autopaper.ui.tests" \
+    --results-dir=$UUID
 fi
 
 # remove files
