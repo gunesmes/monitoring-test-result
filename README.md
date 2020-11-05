@@ -29,3 +29,14 @@ I choose the bar chart, later I will add one column to show the number of succes
 Finally, we can create a Kibana Dashboard that can display every chart related to the automated test results. Click on the Dashboard menu and click the add button on the top-right then select the visualization that you created in the previous step. That’s all! Now we can check the dashboard.
 
 ![Kibana Dashboard](img/kibana-dashboard.png)
+
+
+### Docker Run
+To run the tests with the image:
+```bash
+> docker run --rm --network host -v $PWD/<path-to-xmls>:/code/reports gunesmes/export-xml-data-elasticsearch:latest <elastic-address-with-index> <project-name> /code/reports <api-key>
+>
+> docker run --rm --network host -v $PWD/build/test-results/test:/code/reports gunesmes/export-xml-data-elasticsearch:latest http://127.0.0.1:9200/app/suite apitest /code/reports no-key
+```
+
+To create Elasticsearch [api-key](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html)
