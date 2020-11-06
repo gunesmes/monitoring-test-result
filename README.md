@@ -1,3 +1,6 @@
+## Centralization of Log Systems For Automated Test
+In a development pipeline, we have a variety of tools and technologies with different languages and scripts. CI/CD pipeline is a good place the see the process of the development, but to get the detail of an item in the pipeline, we need to get into that item and tackle with logs and data. Some times this investigation requires some capabilities to understand it. One of the easiest ways to get a common understanding from the logs in the pipeline is using one easy tool for the whole process. When we collect all the logs and data into one place then we can start debugging activity from here. Therefore the centralized log system means that all the logs and data related to the development pipeline should be stored in one place with a timestamp and/or tags for data separation.
+
 ## Export data to Elasticsearch
 ```bash 
 ## run test and export data
